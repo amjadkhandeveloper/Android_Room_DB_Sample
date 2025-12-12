@@ -60,6 +60,10 @@ class MainActivity : ComponentActivity() {
 
 
         lifecycleScope.launch {
+            //After migration we need to have value for isActive after date object which we have passed.
+//            database.ContactDao().insertContact(Contact(2, "PersonTwo", Date(),1))
+
+            //Before migration we need to have value for isActive after date object which we have passed.
             database.ContactDao().insertContact(Contact(2, "PersonTwo", Date()))
             database.ContactDao().insertContact(Contact(3, "PersonThree", Date()))
             database.ContactDao().insertContact(Contact(4, "PersonFour", Date()))
